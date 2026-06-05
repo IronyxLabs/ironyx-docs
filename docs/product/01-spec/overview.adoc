@@ -1,0 +1,15 @@
+= Ironyx
+
+== Purpose
+The purpose of Ironyx is to provide a clear, modular, and scalable foundation for documenting and understanding a product’s behavior, structure, and intent. It unifies specification, architecture, and design into a coherent system that supports fast iteration, consistent decision‑making, and long‑term maintainability.
+
+Ironyx exists to solve the recurring problems of fragmented documentation, inconsistent terminology, and slow onboarding. By offering a structured, minimalistic framework, it enables teams to reason about the product at a high level, communicate effectively, and evolve the system without losing clarity.
+
+Ironyx focuses on:
+* *Clarity* — a single, authoritative source of truth for what the product is and how it behaves
+* *Structure* — well‑defined layers separating specification, architecture, and design
+** *Scalability* — a documentation model that grows with the product
+* *Velocity* — supporting rapid iteration without ceremony
+* *Consistency* — shared language, shared concepts, shared understanding
+
+This document defines the conceptual foundation of the product and serves as the entry point for all deeper specifications.
