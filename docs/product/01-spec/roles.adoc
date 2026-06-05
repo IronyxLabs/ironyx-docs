@@ -1,0 +1,23 @@
+= System Roles
+
+* *Administrator* - Manages access control, permissions, organization settings, and system-level configuration. Ensures governance, compliance, and security.
+
+* *Product Owner* - Owns the product vision and ensures alignment accross the team. Defines goals, scope, priorities, and success criteria. Makes final decisions on what gets build and why.
+
+* *Stakeholder* - Represents business interests and constraints. Provides input, feedback, and domain knowledge. Not a daily operator but influences direction and validates outcomes.
+
+* *Business Analyst* - Translate business needs into structured requirements, models and flows. Ensures consistency between business intent and technical execution. Maintains requirement traceability.
+
+* *UX/UI Designer* - Designs user journeys, flows, wireframes, and interaction patterns. Ensures usability, clarity, and experience consistency accross the product.
+
+* *System Architect* - Defines system structure, domain boundaries, integration patterns, and technical constraints. Owns architectural integrity and long‑term technical direction.
+
+* *Developer* — Implements features, writes code, reviews PRs, and contributes to technical design. Primary creator of executable artifacts and maintainers of code quality.
+
+* *QA Engineer* — Ensures product quality through testing, validation, and defect analysis. Owns test coverage, reproducibility, and verification processes.
+
+* *DevOps Engineer* — Manages CI/CD pipelines, deployments, infrastructure, observability, and operational reliability. Ensures smooth delivery and stable environments.
+
+* *Observer / Client* — Read‑only role for external parties who need visibility into progress, artifacts, or decisions without contributing or modifying anything.
+
+* *Administrator* — Manages access control, permissions, organization settings, and system‑level configuration. Ensures governance, compliance, and security.
