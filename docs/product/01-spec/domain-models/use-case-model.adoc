@@ -1,0 +1,58 @@
+= Use Case
+
+== Purpose
+
+A Use Case defines a single, well‑scoped behavioral path of the system from the perspective of a specific Role.  
+It decomposes a User Story into concrete, testable interactions and serves as the behavioral foundation for Scenarios and validation.
+
+Use Cases describe *what the system does*, not how it is implemented.
+
+- Provide a clear, domain-level description of system behavior.
+- Break down a User Story into distinct behavioral units.
+- Serve as the parent structure for Scenarios (test cases).
+- Provide a stable anchor for Defects discovered during validation.
+- Ensure consistent understanding across Product, Engineering, and QA.
+
+== Core Entities
+- Scenarios
+
+== Attributes
+
+- `id`: Unique identifier of the Use Case.
+- `name`: Human-readable name describing the behavior.  
+  Example: "Successful Search", "Search With No Results".
+- `description`: Short explanation of the behavior and its intent.
+- `actor`: The Role initiating the Use Case.  
+  References the `Role` entity.
+- `trigger`: The event or action that starts the Use Case.  
+  Example: "The user enters a search query."
+- `preconditions`: Conditions that must be true before the Use Case can start.  
+  Example: "The system is available."
+- `postconditions`: Conditions that must be true after the Use Case completes successfully.  
+  Example: "The system returns a list of matching books."
+- `main_flow`: The primary sequence of steps describing the expected behavior.
+- `exceptions`: Error conditions or deviations from the main flow that the system must handle.  
+  Optional.
+
+
+== Statuses
+
+Use Cases are documentation entities, not development tasks.  
+Their lifecycle reflects definition quality, not implementation progress.
+
+- **Draft** — The Use Case is being created; structure incomplete.  
+- **Defined** — The Use Case is fully written and behaviorally complete.
+- **Validated** — All related Scenarios are implemented and passing.
+
+== Relationships
+
+- 1 User Story → N Use Cases  
+- 1 Use Case → 1 Role (Actor)  
+- 1 Use Case → N Scenarios  
+
+== Notes
+
+- One Use Case represents exactly one behavioral path.  
+  Alternate flows must be modeled as separate Use Cases.
+- Use Cases do not contain UI details or implementation specifics.
+- Use Cases remain stable over time; Scenarios evolve as coverage expands.

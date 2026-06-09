@@ -1,0 +1,31 @@
+= Domain Area Model
+
+== Purpose
+
+A *Domain Area* represents a distinct business or functional segment within a Product.  
+It defines the boundaries, responsibilities, and conceptual scope of a specific part of the system.
+
+Domain Areas help structure the Product into clear, manageable units that reflect real business logic rather than technical modules.
+
+- Provide a clear conceptual separation of business responsibilities.
+- Define the scope and boundaries of each functional area.
+- Organize Features and Documents under meaningful business contexts.
+- Support ownership and contributor assignment at a domain level.
+- Improve clarity, maintainability, and onboarding for complex Products.
+
+== Core Entities
+
+The Product Model consists of the following primary entities:
+- Feature
+
+== Attributes
+
+- `name`: The name of the domain area (e.g., "User Management", "Billing", "Authentication").
+- `description`: A concise explanation of what the domain area covers.
+- `responsibility`: The business responsibilities and purpose of this domain area.
+- `started_at`: The date when this domain area became part of the Product's lifecycle.
+
+== Relationships
+
+- 1 Product → N Domain Areas  
+- 1 Domain Area → N Features

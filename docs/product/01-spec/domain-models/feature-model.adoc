@@ -1,0 +1,33 @@
+= Feature
+
+== Purpose
+
+A *Feature* represents a concrete, user‑facing capability within a specific Domain Area.  
+It defines a functional unit of value that the Product delivers, expressed in clear business terms.
+
+Features are the core building blocks of a Domain Area and describe what the system must enable, not how it is implemented.
+
+- Capture a single, well‑defined business capability.
+- Provide a clear functional description within a Domain Area.
+- Serve as the parent structure for User Stories and acceptance criteria.
+- Support planning, prioritization, and roadmap alignment.
+- Maintain conceptual clarity between business intent and implementation details.
+
+== Core Entites
+- User Stories
+
+== Attributes
+
+- `name`: The name of the feature (e.g., "User Registration", "Search Books", "Process Payment").
+- `description`: A concise explanation of the feature’s purpose and behavior.
+- `problem`: The underlying problem or pain point this feature aims to solve.
+- `motivation`: The business reason or value behind introducing this feature.
+- `acceptance_criteria`: High‑level conditions that must be met for the feature to be considered complete.
+- `status`: The current lifecycle state (e.g., "Planned", "In Progress", "Completed", "Deprecated").
+- `version`: The Product Version in which this feature is introduced or delivered.
+- `started_at`: When work or conceptualization of this feature began.
+
+== Relationships
+
+- 1 Domain Area → N Features
+- 1 Feature → N User Stories

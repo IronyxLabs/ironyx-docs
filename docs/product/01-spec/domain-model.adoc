@@ -26,13 +26,15 @@ A Product is the primary container for all work, context, decisions, and artifac
 It defines the strategic direction, domain boundaries, roadmap, and release lifecycle of the platform.
 
 .A Product includes:
-* Domain Areas
+* <<domain-models/domain-area-model.adoc,Domain Areas>>
+* Roles
 * Initiatives
 * Milestones
 * Roadmap items
 * Decisions
 * Documents
 * Backlog and feature definitions
+* Version
 
 A Product is stable, long‑lived, and evolves continuously.
 
@@ -115,7 +117,16 @@ Decisions ensure long‑term consistency across the Product.
 == Document model
 A Document is any authored or attached artifact that provides additional context.
 
-.Document types include:
+.Document categories includes:
+* Specifications
+* Architecture
+* Decisions
+* Research
+* Design
+* Collaboration
+* Diagrams
+
+.Document types include under document categories:
 * Specifications
 * RFCs
 * Notes
