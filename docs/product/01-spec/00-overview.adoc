@@ -1,0 +1,12 @@
+= Overview
+:toc: macro
+:toclevels: 1
+
+Software teams work across fragmented tools, scattered documents, and inconsistent communication channels.
+Critical decisions, specifications, and workflows become disconnected, making it difficult to maintain clarity, alignment, and momentum throughout the development lifecycle.
+
+*Ironyx* is built for _Product Owners_, _Business Analysts_, _UX Designers_, _Developers_, _Testers_, and _Stakeholders_ who need a unified, context‑driven environment to collaborate and understand the evolving state of a project.
+It provides a single, structured platform where every decision, requirement, workflow, and artifact is connected, traceable, and always presented in the right context for each role.
+
+Teams gain a shared understanding of their product, reduce ambiguity, accelerate decision‑making, and build software with greater confidence, consistency, and clarity.
+Ironyx transforms project chaos into a coherent, navigable system that supports the entire xref:99-glossary.adoc#sdlc[SDLC] from vision to release.

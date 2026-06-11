@@ -1,0 +1,21 @@
+= Product Management (PROD)
+
+== UC-PROD-01: Create Product
+
+_Product Owner_ creates a new product in the system. The product must have a unique name and a description. The system validates the input and saves the product to the database.
+
+After creation, the _Product Owner_ is able to configure product settings, define specifications, and invite contributors such as _Developers_, _Business Analysts_, _UX Designers_, _QA Engineers_ and _Stackeholders_ to collaborate on the product.
+
+After creation the product automatically have *Vision* status.
+
+== UC-PROD-02: Edit Product
+
+_Product Owner_ edits an existing product's details, such as name, description, and settings. The system validates the changes and updates the product information in the database. The _Product Owner_ can also manage the product's contributors, adding or removing team members as needed.
+
+== UC-PROD-03: Delete Product
+
+_Product Owner_ deletes a product from the system. The system prompts for confirmation before permanently removing the product and all associated data from the database. This action cannot be undone, and all contributors will lose access to the deleted product.
+
+== UC-PROD-04: Archive Product
+
+_Product Owner_ archives a product that is no longer active but needs to be retained for historical reference. The system moves the product to an archived state, making it read-only and inaccessible for regular use. Contributors can view the archived product but cannot make any changes to it.

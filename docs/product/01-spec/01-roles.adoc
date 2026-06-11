@@ -1,0 +1,26 @@
+= Roles
+:toc: macro
+:toclevels: 1
+
+The Ironyx platform supports several roles across the software development lifecycle. Each role contributes a distinct perspective and set of responsibilities, and the system provides the context, structure, and traceability required for them to collaborate effectively. Roles are global entities within the product model, referenced by workflows, permissions, and specifications throughout the system.
+
+== Product Owner
+The Product Owner defines the direction of the product and ensures that the team works toward a clear and consistent vision. They create and prioritize requirements, make decisions that shape the system, and maintain alignment across stakeholders. Their responsibilities include clarifying intent, resolving ambiguity, and ensuring that specifications reflect real business needs. The PO relies on Ironyx to document decisions, track changes, and maintain a coherent understanding of the evolving product.
+
+== Business Analyst
+The Business Analyst translates business needs into structured, traceable specifications. They refine requirements, define workflows, and ensure that domain rules are represented accurately. The BA connects user goals, system behavior, and domain concepts into a consistent model that guides development and testing. Ironyx provides the BA with a unified environment where requirements, decisions, and workflows remain connected and discoverable.
+
+== UX Designer
+The UX Designer shapes user interactions and flows based on clear goals and contextual information. They explore how users navigate the system, define interface behaviors, and ensure that the product supports intuitive and meaningful experiences. UX Designers rely on Ironyx to understand the intent behind requirements, the decisions that influence behavior, and the workflows that describe how users engage with the system.
+
+== Developer
+Developers implement functionality using accurate, up‑to‑date specifications. They depend on clear requirements, connected decisions, and well‑defined workflows to avoid ambiguity and ensure reliable implementation. Ironyx provides developers with a single source of truth where they can trace each feature back to its intent, context, and acceptance criteria. This reduces uncertainty and supports consistent, maintainable development.
+
+== QA Engineer
+QA Engineers validate that the system behaves as expected and that every feature aligns with its defined intent. They rely on clear acceptance criteria, connected scenarios, and traceable requirements to ensure thorough and accurate validation. QA Engineers use Ironyx to understand the context behind each feature, the decisions that shaped it, and the workflows it supports. Their work ensures product quality, identifies gaps, and maintains confidence in the system’s behavior as it evolves.
+
+== Stakeholder
+Stakeholders provide strategic input and review the progress of the product. They rely on transparency, clarity, and traceability to understand how the system evolves and how decisions impact the overall direction. Ironyx offers stakeholders a high‑level view of the product’s structure, goals, and ongoing changes without requiring deep technical involvement.
+
+== Administrator
+The Administrator manages the system‑level aspects of Ironyx. They oversee user accounts, role assignments, product settings, and domain structures. Administrators maintain the permission model, ensure data integrity, and support audit, archival, and recovery operations. Their responsibilities extend beyond product‑level collaboration into the operational stability and governance of the platform. Ironyx provides administrators with the tools needed to configure, maintain, and secure the environment across all products and teams.

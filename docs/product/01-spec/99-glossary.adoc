@@ -1,0 +1,4 @@
+= Glossary
+
+[horizontal,options="header"]
+[[sdlc]]SDLC:: Software Development Life Cycle

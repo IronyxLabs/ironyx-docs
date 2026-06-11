@@ -1,0 +1,25 @@
+= Organization Management (ORG)
+
+== UC-ORG-001 — Create Organization
+
+An authenticated user creates a new organization in *Ironyx*. The system collects the required information, such as the organization name and optional descriptive details, and validates the input. Once the data is confirmed, *Ironyx* creates the organization as an isolated workspace with its own configuration space and data boundaries.
+
+The user who creates the organization is automatically receiving full administrative privileges. After the organization is created, the user is redirected to the organization dashboard, where they can inviting team members, and configuring the organization’s structure.
+
+== UC-ORG-002 — Invite User to Organization
+
+An organization administrator invites a new user to join the organization. The administrator provides the email address of the invitee and assigns them a role that defines their permissions within the organization. *Ironyx* sends an email invitation to the specified address, containing a link to accept the invitation.
+
+When the invitee clicks the link, they are prompted to sign in through the external identity provider. Upon successful authentication, *Ironyx* verifies the user's identity, checks the invitation status, and grants them access to the organization according to the permissions defined in the invitation.
+
+== UC-ORG-003 — Manage Organization Settings
+
+An _Organization _Administrator_ accesses the organization settings to update configuration options. These settings include modifying the organization name, updating the description, and managing the list of users associated with the organization. *Ironyx* validates all submitted changes and saves them as part of the organization’s configuration.
+
+When managing users, the _Administrator_ can adjust role assignments within the organization. Only the *Administrator* and *Product Owner* roles can be granted by an Organization _Administrator_. Any changes to user roles or organization details are applied immediately, and *Ironyx* may notify affected users when necessary.
+
+This Use Case ensures that organization-level configuration remains controlled, auditable, and aligned with the organization’s administrative policies.
+
+== UC-ORG-004 — Delete Organization
+
+An _Organization _Administrator_ initiates the deletion of an organization. The system prompts the administrator to confirm the action, emphasizing that this operation is irreversible and will permanently remove all data, products, and configurations associated with the organization. Upon confirmation, *Ironyx* deletes the organization and all its related data from the system. The administrator is then redirected to the landing page, and any users who were part of the organization receive notifications about the deletion. This Use Case ensures that organization removal is handled securely and with clear communication to all affected parties.

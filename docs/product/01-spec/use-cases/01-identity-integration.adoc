@@ -1,0 +1,21 @@
+= Identity Integration (IDP)
+
+== UC-IDP-001: New User Signs In
+
+A new user signs in to *Ironyx* through an external identity provider. Ironyx receives the verified identity information from the provider, creates a new user account if one does not already exist, and then offers the user the option to create a new organization or request access to an existing one.
+
+== UC-IDP-002: Existing User Signs In
+
+An existing user signs in to *Ironyx* through the external identity provider. *Ironyx* receives the verified identity information, recognizes the user, and restores their access to the organizations and products they are associated with. Since the identity is already trusted and mapped, the user enters the system without providing any additional credentials or performing further authentication steps.
+
+== UC-IDP-003: Invited User Signs In
+
+An invited user receives an email invitation to join an organization in *Ironyx*. When they click the invitation link, they are directed to sign in through the external identity provider. Upon successful authentication, *Ironyx* verifies the user's identity, checks the invitation status, and grants them access to the organization and its products according to the permissions defined in the invitation.
+
+== UC-IDP-004: User Signs Out
+
+A user chooses to sign out of *Ironyx*. The system terminates the active *Ironyx* session and clears the user’s authorization context. After the local session is closed, *Ironyx* redirects the user to the external identity provider’s logout endpoint to ensure that the user is fully signed out across all connected applications.
+
+If the identity provider supports global logout, the user is signed out from all applications using the same SSO session. If global logout is not supported, the user is informed that their identity provider session may still remain active. After completing the logout process, the user is redirected to the *Ironyx* landing page.
+
+
