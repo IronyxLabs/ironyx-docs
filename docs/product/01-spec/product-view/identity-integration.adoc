@@ -1,0 +1,74 @@
+= Identity Integration – Product View
+
+== Purpose
+Identity Integration ensures that any user can sign in to *Ironyx* using an external identity provider (IdP) and that *Ironyx* always creates or finds the correct internal user account automatically, consistently, and without duplicates.
+
+The goal is to provide a frictionless first login and a clean, unified user identity across all *Ironyx* products.
+
+== Problems Solved
+
+=== External Login Support
+Users can authenticate with Google, Azure AD, GitHub, Apple, or any supported IdP.
+
+=== Automatic User Creation
+*Ironyx* creates the internal user profile on first login without requiring admin involvement.
+
+=== Duplicate Prevention
+Repeated logins never create multiple accounts for the same person.
+
+=== Consistent Identity
+User information (email, display name, avatar, locale) is normalized into a clean *Ironyx* format.
+
+=== IdP-Independent Internal User
+Once created, the *Ironyx* user is not tied to any specific IdP.
+
+== User Experience
+
+=== First Login
+1. User selects an IdP (Google, Azure AD, GitHub, etc.).
+2. The IdP authenticates the user.
+3. *Ironyx* automatically creates the internal user profile.
+4. The user lands in the product immediately.
+
+=== Returning Login
+*Ironyx* recognizes the user instantly without creating duplicates.
+
+=== Admin Experience
+Admins see a clean, unified user list with no duplicates and no messy IdP data.
+
+== Core Capabilities
+
+=== External Identity Intake
+*Ironyx* accepts identity information from any supported IdP.
+
+=== Identity Normalization
+Email, display name, avatar, and locale are cleaned and standardized.
+
+=== User Existence Guarantee
+If the user does not exist, *Ironyx* creates them automatically.
+
+=== Idempotent Login Flow
+Repeated logins never create duplicate accounts.
+
+=== Future-Proof Identity Layer
+The system can later support SCIM, role mapping, and organization auto-assignment without redesign.
+
+== Business Rules
+
+=== Email Requirement
+A user must always have a valid, normalized email.
+
+=== Display Name Requirement
+A user must always have a human-readable display name.
+
+=== User Uniqueness
+A user is uniquely identified by email inside *Ironyx*.
+
+=== No Duplicates
+The system must never create multiple accounts for the same person.
+
+=== IdP Independence
+Internal identity must not depend on IdP-specific formats.
+
+== Summary
+Identity Integration guarantees that any external login results in one clean, unified, duplicate-free *Ironyx* user — automatically and instantly.
