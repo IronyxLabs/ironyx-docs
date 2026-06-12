@@ -12,10 +12,14 @@ After creation the product automatically have *Vision* status.
 
 _Product Owner_ edits an existing product's details, such as name, description, and settings. The system validates the changes and updates the product information in the database. The _Product Owner_ can also manage the product's contributors, adding or removing team members as needed.
 
-== UC-PROD-03: Delete Product
+== UC-PROD-03: Rejected Product
+
+_Product Owner_ rejects a product that does not meet the necessary criteria or requirements. The system prompts for confirmation before marking the product as rejected. Once rejected, the product becomes inactive and is removed from active listings, but it remains in the database for historical reference. Contributors can view the rejected product but cannot make any changes to it. The reason for the rejection must be documented for future reference, and stakeholders are notified about the change in product status.
+
+== UC-PROD-04: Terminate Product
+
+_Product Owner_ terminates a product that is no longer viable or needed. The system prompts for confirmation before marking the product as terminated. Once terminated, the product becomes inactive and is removed from active listings, but it remains in the database for historical reference. Contributors can view the terminated product but cannot make any changes to it. The reason for the termination must be documented for future reference, and stakeholders are notified about the change in product status.
+
+== UC-PROD-05: Delete Product
 
 _Product Owner_ deletes a product from the system. The system prompts for confirmation before permanently removing the product and all associated data from the database. This action cannot be undone, and all contributors will lose access to the deleted product.
-
-== UC-PROD-04: Archive Product
-
-_Product Owner_ archives a product that is no longer active but needs to be retained for historical reference. The system moves the product to an archived state, making it read-only and inaccessible for regular use. Contributors can view the archived product but cannot make any changes to it.

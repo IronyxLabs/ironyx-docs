@@ -1,0 +1,33 @@
+= Team Domain Model
+
+The Team domain defines the structure and relationships of teams within an Organization. Two types of teams exists: *Developer Team* and *QA Team*. A team can be assigned to multiple products, and a product can have multiple teams.
+
+== Attributes
+[horizontal]
+Name:: The unique name of the team within the organization.
+Type:: The type of the team (Developer Team or QA Team).
+Description:: An optional description providing additional context about the team.
+Created At:: The timestamp when the team was created.
+
+== Entities
+- Users
+- Organization
+- Products
+
+== Invariants
+
+- A team must have a unique name within the organization.
+- A team must have a valid type (Developer Team or QA Team).
+- A team must have at least one member.
+- A team cannot be assigned to a Terminated Product.
+- A team cannot be assigned to a product if any of its members are deactivated.
+- A user cannot be a member of a Developer Team if does not have the Developer organization role.
+- A user cannot be a member of a QA Team if does not have the QA Engineer organization role.
+- A user can be a member of multiple teams.
+
+== Relationships
+
+- N Teams -> 1 Organization
+- N Teams -> N Users
+- N Teams -> N Products
+

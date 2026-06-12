@@ -1,0 +1,34 @@
+= Organization Domain Model
+
+The Organization domain defines the core structural and identity boundaries of *Ironyx*.  
+All users, teams, products, and permissions exist within the scope of an Organization.
+
+An Organization contains:
+
+- Users
+- Teams
+- Products
+- Invitations
+- Role assignments
+- Audit history
+
+An Organization is created by an authenticated user and is managed by one or more Organization _Administrators_.
+
+== Attributes
+
+[horizontal]
+Name:: The unique name of the Organization.
+Logo:: An optional logo image representing the Organization.
+Description:: An optional description providing additional context about the Organization.
+Created At:: The timestamp when the Organization was created.
+
+== Invariants
+
+- An Organization must have a unique name.
+- An Organization must have at least one Administrator.
+
+== Relationships
+
+- N Organization -> N Users
+- 1 Organization -> N Teams
+- 1 Organization -> N Products

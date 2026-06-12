@@ -1,0 +1,43 @@
+= Product Domain Model
+
+The Product domain defines the structure and relationships of products within an Organization. 
+
+== Entities
+
+- Organization
+- Users
+- Teams
+- Roles
+
+== Attributes
+
+[horizontal]
+Name:: The unique name of the product within the organization.
+Description:: An optional description providing additional context about the product.
+State:: The current state of the product.
+Started At:: The timestamp when the product was created.
+
+== Invariants
+
+- A product must have a unique name within the organization.
+- A product must have a valid state.
+- A product must have exactly one Product Owner.
+- A product can have multiple Business Analysts, and Stakeholders.
+- A product only can go to Refinement state if it has at least one Business Analyst assigned.
+- A product only can go to Active state if it has at least one Developer Team.
+
+== Relationships
+
+- 1 Product -> 1 Organization
+- N Products -> N Users (through roles)
+- N Products -> N Teams
+- N Products -> N Roles
+- N Products -> 1 Product Owner
+- N Products -> N Business Analysts
+- N Products -> N Stakeholders
+
+== Lifecycle
+
+Draft -> Refinement -> Active -> Terminated
+
+Product can be Rejected in any state except Terminated.

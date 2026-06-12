@@ -1,0 +1,149 @@
+= Role Domain Model
+
+The Role domain defines the permission structure of *Ironyx* at two distinct levels:
+organization-level roles and product-level roles.  
+These role types are conceptually separate and serve different purposes.
+
+== Organization Role Model
+
+Organization roles define what a User is allowed to do at the organization level.  
+They determine eligibility for team membership and product-level roles.
+
+=== Entities
+
+- Organization
+- Users
+
+=== Administrator
+
+The highest-level organizational role.  
+Responsible for governance, user lifecycle, invitations, and global configuration.
+
+Capabilities:
+- Organization management
+- User lifecycle management
+- Team management
+- Product ownership assignment
+- Role assignment and management
+- Audit and compliance oversight
+
+=== Stakeholder
+
+A non-technical organizational participant.
+
+Capabilities:
+- Read access to relevant products
+- Participation in stakeholder reviews
+- Eligibility for product-level Stakeholder roles
+
+=== Product Owner
+
+The Product Owner role is assigned at the product level and defines the responsibilities and permissions of a user within a specific product context.  
+Product Owners are responsible for defining the vision, direction, and requirements of the product. They have the authority to make decisions that shape the product's development and ensure that it meets the needs of stakeholders and users.
+
+Capabilities:
+- Create product
+- Define product vision and strategy
+- Create and prioritize product requirements
+- Assign users or teams to the product with specific roles
+
+=== Business Analyst
+A contributor responsible for requirements analysis and refinement.
+
+Capabilities:
+- Create and refine product requirements
+- Facilitate requirement clarification sessions
+- Support the Product Owner in decision-making related to requirements
+- Document domain rules and constraints
+
+=== Developer
+A technical contributor within the organization.
+
+Capabilities:
+- Participation in technical teams
+
+=== QA Engineer
+A quality assurance contributor within the organization.
+
+Capabilities:
+- Participation in QA teams
+
+== Invariants
+- A User must have exactly one organization-level role.
+- Organization roles determine eligibility for product-level roles.
+- Organization roles cannot be modified by non-administrators.
+- Organization roles are global and predefined; they cannot be created or deleted by tenants.
+
+== Product Role Model
+
+=== Entities
+
+- Product
+- Users
+
+=== Product Owner (PO)
+The primary decision-maker for the product.  
+Responsible for product vision, prioritization, and roadmap ownership.
+
+Capabilities:
+- Create a product
+- Define and update product vision
+- Manage roadmap items
+- Oversee product lifecycle transitions
+
+=== Business Analyst (BA)
+Responsible for requirements, refinement, and domain analysis.
+
+Capabilities:
+- Create and refine features
+- Document requirements
+- Facilitate refinement sessions
+- Support PO in decision-making
+
+=== Developer
+Responsible for implementing product features.
+
+Capabilities:
+- Access technical specifications
+- Participate in development workflows
+- Provide technical estimates
+- Contribute to implementation decisions
+
+=== QA Engineer
+Responsible for product quality assurance.
+
+Capabilities:
+- Access test specifications
+- Create and execute test plans
+- Validate feature acceptance
+- Report defects and quality risks
+
+=== Stakeholder
+A non-technical participant with visibility into the product.
+
+Capabilities:
+- Read access to product artifacts
+- Participate in reviews and demos
+- Provide business feedback
+
+== Invariants
+
+- Product roles are scoped to a single Product.
+- A User may hold multiple product roles across different products.
+- A Product Role may only be assigned to Users eligible based on their organization-level role.
+- A Terminated Product cannot have its roles modified.
+- Product roles cannot exist without an associated Product.
+- Product roles cannot override organization-level restrictions.
+- Product Stakeholders can be every user in the organization.
+
+== Domain Notes
+
+- Product role assignment is part of the Product aggregate, not the User aggregate.
+- Removing a user from a product role is treated as a modification of the Product.
+- Product roles define capability categories; technical permissions are defined in the Permission Model.
+
+== Relationships
+- N Users -> 1 Organization Role
+- N Users -> N Product Roles
+- 1 Product Role -> 1 Product
+- 1 Product Role -> N Users
