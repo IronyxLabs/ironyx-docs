@@ -1,0 +1,17 @@
+= Technical Overview
+
+== Tech Stack
+
+=== Backend
+* Framework: *.NET*
+* Language: *C#*
+* Relational Database: *PostgreSQL*
+* Event Store: *KurrentDB*
+* Architecture Style: *Event-driver, microservice architecture, CQRS oriented*
+* API Style: *REST + domain-specific endpoint*
+
+== Frontend
+* Framework: *Angular*
+* Language: *TypeScript*
+* UI Architecture: *Component-driven*
+* Auth: *OIDC*
