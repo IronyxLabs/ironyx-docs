@@ -11,7 +11,7 @@ flowchart TB
     Executor1[HTTP Executor]
     Executor2[Other Executor]
 
-    ExternalService -. .NET Client .-> Engine
+    ExternalService -->|Scheduler Client| Engine
     API --> Engine
     Engine --> Executor1
     Engine --> Executor2
