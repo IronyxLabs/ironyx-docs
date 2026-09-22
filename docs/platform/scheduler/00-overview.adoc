@@ -1,0 +1,22 @@
+= Overview
+
+The __Scheduler__ Service is responsible for managing and executing scheduled jobs within the platform.
+
+It provides a central scheduling engine that determines when a job should be executed and coordinates its execution through registered executors.
+
+The __Scheduler__ Service does not implement the actual business operation of a job. Instead, it delegates execution to services that register themselves as executors for a specific protocol or job type.
+
+= High-level architecture
+[mermaid]
+....
+flowchart TB
+    API[Scheduler API]
+    Engine[Scheduler Engine]
+
+    Executor1[HTTP Executor]
+    Executor2[Other Executor]
+
+    API --> Engine
+    Engine --> Executor1
+    Engine --> Executor2
+....
