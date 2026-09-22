@@ -7,8 +7,8 @@ It provides a central scheduling engine that determines when a job should be exe
 The __Scheduler__ Service does not implement the actual business operation of a job. Instead, it delegates execution to services that register themselves as executors for a specific protocol or job type.
 
 = High-level architecture
-[mermaid]
-....
+[source,mermaid]
+----
 flowchart TB
     API[Scheduler API]
     Engine[Scheduler Engine]
@@ -19,4 +19,4 @@ flowchart TB
     API --> Engine
     Engine --> Executor1
     Engine --> Executor2
-....
+----
