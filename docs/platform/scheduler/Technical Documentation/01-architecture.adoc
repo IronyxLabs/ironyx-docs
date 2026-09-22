@@ -8,7 +8,7 @@ flowchart TB
     API[Scheduler API]
     Engine[Scheduler Engine]
 
-    Database{ shape: cyl, label: "Database" }
+    Database@{ shape: cyl, label: "Database" }
 
     Executor1[HTTP Executor]
     Executor2[Other Executor]
