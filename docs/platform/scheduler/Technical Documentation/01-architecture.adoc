@@ -8,11 +8,16 @@ flowchart TB
     API[Scheduler API]
     Engine[Scheduler Engine]
 
+    Database{ shape: cyl, label: "Database" }
+
     Executor1[HTTP Executor]
     Executor2[Other Executor]
 
     ExternalService -->|Scheduler Client| API
     API --> Engine
+
+    Engine <--> Database
+    
     Engine --> Executor1
     Engine --> Executor2
 ----
