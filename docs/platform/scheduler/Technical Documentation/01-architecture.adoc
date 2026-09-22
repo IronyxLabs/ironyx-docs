@@ -1,0 +1,18 @@
+= Architecture
+
+[source,mermaid]
+----
+flowchart TB
+    ExternalService[Ironyx Service]
+
+    API[Scheduler API]
+    Engine[Scheduler Engine]
+
+    Executor1[HTTP Executor]
+    Executor2[Other Executor]
+
+    ExternalService -..NET Client.-> Engine
+    API --> Engine
+    Engine --> Executor1
+    Engine --> Executor2
+----
