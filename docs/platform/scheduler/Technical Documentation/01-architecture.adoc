@@ -2,22 +2,22 @@
 
 [source,mermaid]
 ----
-flowchart TB
-    ExternalService[Ironyx Service]
+flowchart LR
+    service@{shape: procs, label: "External Service" }
+    executor@{shape: procs, label "Executors" }
 
-    API[Scheduler API]
-    Engine[Scheduler Engine]
+    service --Schedule Job--o engine
 
-    Database@{ shape: cyl, label: "Database" }
+    subgraph scheduler [Scheduler]
+        direction TB
 
-    Executor1[HTTP Executor]
-    Executor2[Other Executor]
+        ui[Management UI]
+        engine[Engine]
 
-    ExternalService -->|Scheduler Client| API
-    API --> Engine
+        ui <--> engine
+        database@{ shape: cyl, label: "Database" }    
+        engine <--> database
+    end
 
-    Engine <--> Database
-    
-    Engine --> Executor1
-    Engine --> Executor2
+    engine --Trigger Execution--> executor
 ----
