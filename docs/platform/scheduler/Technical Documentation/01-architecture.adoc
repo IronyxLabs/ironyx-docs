@@ -21,3 +21,17 @@ flowchart LR
 
     engine --Trigger Execution--> executor
 ----
+
+== Modules
+* **External Service**: External services that schedule job to be executed.
+* **Executor**: External service that execute that scheduled job.
+* **Scheduler**: Scheduler service. Responsible for managing and triggering the scheduled jobs. Scheduling is possible via an API or managamant UI.
+
+=== Scheduler
+* **Database**: Storing the scheduled jobs.
+* **Engine**: Responsible for managing and triggering the scheduled jobs. It provides an API for managing the jobs and registrate an executor.
+* **Management UI**: Provides UI for managing jobs and following its status.
+
+== Technologies
+- Used database engine is PostgreSQL
+- Used scheduling engine is Quartz.NET
